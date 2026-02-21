@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  jupyter:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+      - models_volume:/app/models
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - models_volume:/app/models
+    depends_on:
+      - jupyter
+
+volumes:
+  models_volume:
