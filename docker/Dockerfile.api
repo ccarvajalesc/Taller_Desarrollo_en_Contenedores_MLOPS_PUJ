@@ -5,7 +5,12 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY main.py model_registry.py predict.py /app/
+
+COPY models/ /app/models/
+
+COPY logs/ /app/logs/
+
 
 EXPOSE 8000
 

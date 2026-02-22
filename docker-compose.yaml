@@ -9,7 +9,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - .:/app
+      #- train.ipynb:/app
       - models_volume:/app/models
 
   api:
@@ -19,7 +19,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .:/app
+      #- .:/app
       - models_volume:/app/models
     depends_on:
       - jupyter
