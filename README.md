@@ -1,6 +1,7 @@
 # Taller_Desarrollo_en_Contenedores_MLOPS_PUJ
 ## Proyecto MLOps: Clasificación de Pingüinos con Arquitectura Desacoplada
-
+Por: Carlos Carvajales y Mateo Ruiz
+---
 Este proyecto implementa una arquitectura de Machine Learning desacoplada orientada a MLOps, utilizando Python y Docker Compose. El objetivo es demostrar buenas prácticas en el ciclo de vida de modelos, separación de entrenamiento e inferencia, y automatización de despliegue.
 
 ### 1. Descripción y Objetivo
